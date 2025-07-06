@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NAL Awareness Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="quiz-container">
+    <h1>NAL Awareness Quiz</h1>
+    <div class="progress-bar"><div id="progressFill"></div></div>
+    <section id="questionBox" class="question-box">
+      <div class="question-text" id="questionText"></div>
+      <div class="options" id="optionsBox"></div>
+      <button id="nextBtn" class="next-btn">Next</button>
+    </section>
+    <section id="impactBox" class="impact-box">
+      <h2>Your Positive Impact</h2>
+      <div class="impact-stats">
+        <div><h4>💧 Water Saved</h4><p id="waterStat">0</p> liters</div>
+        <div><h4>🐄 Animal Lives</h4><p id="animalStat">0</p></div>
+        <div><h4>🌍 CO₂ Reduced</h4><p id="co2Stat">0</p> kg</div>
+      </div>
+      <p id="finalScore"></p>
+      <form id="userForm">
+        <p><strong>We would like to know you</strong></p>
+        <label for="nameInput">Name</label>
+        <input type="text" id="nameInput" required />
+        <label for="phoneInput">Phone</label>
+        <input type="tel" id="phoneInput" required maxlength="10"/>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+      <div class="thank-you" id="thankYouMsg" style="display:none;">✅ Thank you! Your response is saved.</div>
+      <div class="share-buttons">
+        <a href="https://wa.me/?text=Try%20this%20NAL%20Awareness%20Quiz%3A%20https%3A%2F%2Fnagpuranimalliberation.in" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="24" height="24" /> Share on WhatsApp
+        </a>
+        <a href="https://www.instagram.com/nagpuranimalliberation" class="instagram" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" width="24" height="24" /> Follow on Instagram
+        </a>
+      </div>
+    </section>
+    <audio id="correctSound" src="correct.mp3" preload="none"></audio>
+    <audio id="wrongSound" src="wrong.mp3" preload="none"></audio>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
